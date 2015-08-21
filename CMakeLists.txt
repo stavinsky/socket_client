@@ -1,0 +1,5 @@
+set(_REQUIRED_INCLUDES Winsock2.h)
+set(_REQUIRED_LIBRARIES WS2_32.lib WSock32.lib)
+add_library(client STATIC client.cpp )
+target_link_libraries(client ws2_32 logger)
+target_compile_features(client PRIVATE cxx_range_for)
